@@ -1,0 +1,21 @@
+{
+  "name": "minify",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Simple, clean API for minifying Javascript, HTML or CSS.",
+  "keywords": [
+    "minify",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "repository": "git://github.com/segmentio/minify.git",
+  "dependencies": {
+    "uglify-js": "~2.4.3",
+    "sqwish": "~0.2.1",
+    "html-minifier": "~0.5.4"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
