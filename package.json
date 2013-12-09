@@ -9,7 +9,7 @@
     "html",
     "css"
   ],
-  "repository": "git://github.com/segmentio/minify.git",
+  "repository": "git://github.com/ianstormtaylor/minify.git",
   "dependencies": {
     "uglify-js": "~2.4.3",
     "sqwish": "~0.2.1",
