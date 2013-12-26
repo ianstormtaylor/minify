@@ -1,6 +1,7 @@
 {
   "name": "minify",
-  "version": "0.0.1",
+  "repository": "git://github.com/ianstormtaylor/minify.git",
+  "version": "0.1.0",
   "license": "MIT",
   "description": "Simple, clean API for minifying Javascript, HTML or CSS.",
   "keywords": [
@@ -9,13 +10,20 @@
     "html",
     "css"
   ],
-  "repository": "git://github.com/ianstormtaylor/minify.git",
+  "bin": {
+    "minify": "bin/minify"
+  },
   "dependencies": {
     "uglify-js": "~2.4.3",
     "sqwish": "~0.2.1",
-    "html-minifier": "~0.5.4"
+    "html-minifier": "~0.5.4",
+    "commander": "~2.1.0",
+    "write-file-stdout": "0.0.2",
+    "read-file-stdin": "0.0.3",
+    "language-classifier": "0.0.1"
   },
   "devDependencies": {
     "mocha": "*"
-  }
+  },
+  "main": "lib/index.js"
 }
