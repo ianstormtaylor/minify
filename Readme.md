@@ -1,13 +1,15 @@
 
 # minify
 
-  Simple, clean API for minifying Javascript, HTML or CSS.
+  Super clean API for minifying Javascript, HTML or CSS. 
+
+  So you don't have to keep googling for the right tool or the tool's API. And so that you get a nice CLI regardless.
 
 ## Installation
 
     $ npm install ianstormtaylor/minify
 
-## Command Line API
+## CLI
 
 ```
 Usage: minify [<input>] [<output>]
@@ -26,36 +28,28 @@ Examples:
   $ cat input.css | myth | minify > output.css
 ```
 
-## Node API
+## Node
 
 ```javascript
 var minify = require('minify');
 
-// javascript, html or css
-var js = minify.js('string');
-var html = minify.html('string');
-var css = minify.css('string');
+// choose javascript, html or css
+var js = minify.js('js string');
+var html = minify.html('html string');
+var css = minify.css('css string');
 
-// unknown string
-var min = minify(string);
+// or pass an unknown string
+var min = minify('unknown string');
 ```
-
-### minify(string)
-
-  Detect the language of a `string` and use the appropriate minifier to return the minified version. Useful when someone passes in a snippet without a file extension to guess from.
-
-### minify.css(string)
-
-  Returns the minified version of a CSS `string`.
-
-### minify.javascript(string)
-
-  Return the minified version of a Javascript `string`. Aliased to `js`.
-
-### minify.html(string)
-
-  Returns the minified version of an HTML `string`.
 
 ## License
   
-  MIT
+  The MIT License (MIT)
+
+  Copyright (c) 2013, Ian Storm Taylor &lt;ian@ianstormtaylor.com&gt;
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
