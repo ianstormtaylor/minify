@@ -7,7 +7,26 @@
 
     $ npm install ianstormtaylor/minify
 
-## Example
+## Command Line API
+
+```
+Usage: minify [<input>] [<output>]
+
+Options:
+
+  -h, --help     output usage information
+  -V, --version  output the version number
+
+Examples:
+
+  # pass an input and output file
+  $ minify input.css output.css
+
+  # use stdin and stdout
+  $ cat input.css | myth | minify > output.css
+```
+
+## Node API
 
 ```javascript
 var minify = require('minify');
@@ -20,8 +39,6 @@ var css = minify.css('string');
 // unknown string
 var min = minify(string);
 ```
-
-## API
 
 ### minify(string)
 
