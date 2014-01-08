@@ -11,7 +11,7 @@ var path = require('path');
 
 var langs = [
   'css',
-  'javascript',
+  'js',
   'html'
 ];
 
@@ -21,8 +21,8 @@ var langs = [
 
 describe('minify', function () {
   langs.forEach(function (lang) {
-    var min = fixture(lang + '.min');
-    var max = fixture(lang + '.max');
+    var min = fixture('min.' + lang);
+    var max = fixture('max.' + lang);
 
     it(lang, function () {
       assert.equal(min, minify[lang](max));
@@ -45,8 +45,8 @@ describe('cli', function () {
 
   langs.forEach(function (lang) {
     it(lang, function (done) {
-      var min = fixture(lang + '.min');
-      exec('bin/minify < test/fixtures/' + lang + '.max', function (err, stdout) {
+      var min = fixture('min.' + lang);
+      exec('bin/minify test/fixtures/max.' + lang, function (err, stdout) {
         if (err) return done(err);
         assert(stdout == min);
         done();

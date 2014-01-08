@@ -16,7 +16,8 @@ var write = require('write-file-stdout');
 
 program
   .version(require('../package.json').version)
-  .usage('[<input>] [<output>]');
+  .usage('[input] [output]')
+  .option('-l, --language <language>', 'specify the source language');
 
 /**
  * Examples.
@@ -45,6 +46,7 @@ program.parse(process.argv);
 
 var input = program.args[0] ? resolve(program.args[0]) : input;
 var output = program.args[1] ? resolve(program.args[1]) : output;
+var language = program.language;
 
 /**
  * Exists?
@@ -61,8 +63,8 @@ if (input && !exists(input)) {
 
 read(input, function (err, contents) {
   if (err) throw err;
-  var ext = extname(input);
-  var fn = minify[ext] ? minify[ext] : minify;
+  var lang = language || extname(input).slice(1);
+  var fn = minify[lang] ? minify[lang] : minify;
   var min = fn(contents.toString());
   write(output, min);
 });

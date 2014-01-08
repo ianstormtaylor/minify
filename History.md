@@ -1,3 +1,8 @@
+0.1.1 - January 7, 2013
+-----------------------
+* fix cli extname detection
+* add cli language option
+
 0.1.0 - December 26, 2013
 -------------------------
 * add cli
