@@ -32,6 +32,13 @@ describe('minify', function () {
       assert.equal(min, minify(max));
     });
   });
+
+  it('should pass options to uglify js', function(){
+    var js = '(function(){ var analytics = window.analytics = []; analytics.push(1) })();';
+    var opts = { mangle: { except: ['analytics'] }};
+    assert(!~minify(js).indexOf('var analytics'), 'expected "analytics" to be mangled');
+    assert(~minify(js, opts).indexOf('var analytics'), 'expected "analytics" to not be mangled');
+  });
 });
 
 /**
