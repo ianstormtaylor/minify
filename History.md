@@ -1,4 +1,9 @@
-0.1.1 - January 7, 2013
+
+0.2.0 - October 4, 2014
+-----------------------
+* add passing options to uglify
+
+0.1.1 - January 7, 2014
 -----------------------
 * fix cli extname detection
 * add cli language option
