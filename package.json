@@ -14,12 +14,12 @@
     "minify": "bin/minify"
   },
   "dependencies": {
-    "uglify-js": "~2.4.3",
-    "sqwish": "~0.2.1",
-    "html-minifier": "~0.5.4",
+    "uglify-js": "~2.4.16",
+    "sqwish": "~0.2.2",
+    "html-minifier": "~0.7.0",
     "commander": "~2.1.0",
     "write-file-stdout": "0.0.2",
-    "read-file-stdin": "0.0.3",
+    "read-file-stdin": "0.2.0",
     "language-classifier": "0.0.1"
   },
   "devDependencies": {
