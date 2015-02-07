@@ -1,4 +1,8 @@
 
+0.2.1 - February 6, 2015
+------------------------
+* update dependencies
+
 0.2.0 - October 4, 2014
 -----------------------
 * add passing options to uglify

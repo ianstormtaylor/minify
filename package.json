@@ -1,7 +1,7 @@
 {
   "name": "minify",
   "repository": "git://github.com/ianstormtaylor/minify.git",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "description": "Simple, clean API for minifying Javascript, HTML or CSS.",
   "keywords": [
